@@ -1,0 +1,479 @@
+/*
+Overview over USI Kolonization System Resources V0.19.5
+Copyright 2014 By Mhoram
+
+This Work may be distributed under the Creative Commons
+Attribution-ShareAlike 4.0 International or Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License as you
+chose.
+
+*/
+
+# dot -Tpdf -o Resources.pdf Resources.dot
+# dot -Tpng -o Resources.png Resources.dot
+
+digraph Res {
+
+
+# Colony Control Center
+
+#    ReplacementParts -> M1A #C
+#    M1A -> PunchCards #C
+#    M1A -> Recyclables #C
+
+# Machinery Plant
+
+    # SpecMachinery
+
+    Computers -> M3A
+    Robotics -> M3A
+    ModularParts -> M3A
+    AdvMachinery -> M3A
+    ReplacementParts -> M3A
+#    PunchCards -> M3A #C
+    M3A -> SpecMachinery [color = "red"]
+#    M3A -> Recyclables #C
+#    AdvMachinery -> M3A [color = "green"] #C
+#    SpecMachinery -> M3A [color = "green"] #C
+#    "MEP-Manufacturing" -> M3A [color = "green"] #C
+
+    # BasicMachinery
+
+    Metal -> M3B
+    Chemicals -> M3B
+    Polymers -> M3B
+#    PatchKits -> M3B #C
+#    RepairKits -> M3B #C
+#    PunchCards -> M3B #C
+    M3B -> BasicMachinery [color = "red"]
+#    M3B -> Recyclables #C
+#    BasicMachinery -> M3B [color = "green"] #C
+#    "MEP-Manufacturing" -> M3B [color = "green"] #C
+
+    # AdvMachinery
+
+    ElectronicParts -> M3C
+    MechanicalParts -> M3C
+    BasicMachinery -> M3C
+#    RepairKits -> M3C #C
+    ReplacementParts -> M3C
+#    PunchCards -> M3C #C
+    M3C -> AdvMachinery [color = "red"]
+#    M3C -> Recyclables #C
+#    BasicMachinery -> M3C [color = "green"] #C
+#    AdvMachinery -> M3C [color = "green"] #C
+#    "MEP-Manufacturing" -> M3C [color = "green"] #C
+
+# Orbital Repair Shop
+
+    # Recycle
+
+    Recyclables -> M4A
+#    PatchKits -> M4A #C
+#    RepairKits -> M4A #C
+#    PunchCards -> M4A #C
+    M4A -> Chemicals [color = "red"]
+    M4A -> Polymers [color = "red"]
+    M4A -> Metal [color = "red"]
+#    M4A -> Recyclables #C
+#    BasicMachinery -> M4A [color = "green"] #C
+#    "MEP-Manufacturing" -> M4A [color = "green"] #C
+
+    # PatchKits
+
+    Metal -> M4B
+    Chemicals -> M4B
+    Polymers -> M4B
+#    PatchKits -> M4B #C
+#    RepairKits -> M4B #C
+#    PunchCards -> M4B #C
+    M4B -> PatchKits [color = "red"]
+#    M4B -> Recyclables #C
+#    BasicMachinery -> M4B [color = "green"] #C
+#    "MEP-Manufacturing" -> M4B [color = "green"] #C
+
+    # RepairKits
+
+    PlasticParts -> M4C
+    MechanicalParts -> M4C
+    ElectronicParts -> M4C
+#    RepairKits -> M4C #C
+    ReplacementParts -> M4C
+#    PunchCards -> M4C #C
+    M4C -> RepairKits [color = "red"]
+#    M4C -> Recyclables #C
+#    BasicMachinery -> M4C [color = "green"] #C
+#    AdvMachinery -> M4C [color = "green"] #C
+#    "MEP-Manufacturing" -> M4C [color = "green"] #C
+
+    # ReplacementParts
+
+    ModularParts -> M4D
+    Robotics -> M4D
+    Computers -> M4D
+    ReplacementParts -> M4D
+#    PunchCards -> M4D #C
+    M4D -> ReplacementParts [color = "red"]
+#    M4D -> Recyclables #C
+#    AdvMachinery -> M4D [color = "green"] #C
+#    SpecMachinery -> M4D [color = "green"] #C
+#    "MEP-Manufacturing" -> M4D [color = "green"] #C
+
+# Terraformer
+
+    # KaO3->H2O
+
+    Karbonite -> M5A
+#    PatchKits -> M5A #C
+#    RepairKits -> M5A #C
+#    PunchCards -> M5A #C
+    M5A -> Water [color = "red"]
+#    M5A -> Recyclables #C
+#    BasicMachinery -> M5A [color = "green"] #C
+#    "MEP-Environmental" -> M5A [color = "green"] #C
+
+    # Cultivate
+
+    Substrate -> M5B
+    Water -> M5B
+    Compost -> M5B
+#    PatchKits -> M5B #C
+#    RepairKits -> M5B #C
+#    PunchCards -> M5B #C
+    M5B -> EnrichedSoil [color = "red"]
+#    M5B -> Recyclables #C
+#    BasicMachinery -> M5B [color = "green"] #C
+#    "MEP-Environmental" -> M5B [color = "green"] #C
+
+    # Purify
+
+    WasteWater -> M5C
+#    PatchKits -> M5C #C
+#    RepairKits -> M5C #C
+#    PunchCards -> M5C #C
+    M5C -> Water [color = "red"]
+#    M5C -> Recyclables #C
+#    BasicMachinery -> M5C [color = "green"] #C
+#    "MEP-Environmental" -> M5C [color = "green"] #C
+
+    # LFO->H2O
+
+    LiquidFuel -> M5D
+    Oxidizer -> M5D
+#    PatchKits -> M5D #C
+#    RepairKits -> M5D #C
+#    PunchCards -> M5D #C
+    M5D -> Water [color = "red"]
+#    M5D -> Recyclables #C
+#    BasicMachinery -> M5D [color = "green"] #C
+#    "MEP-Environmental" -> M5D [color = "green"] #C
+
+# BioLab
+
+    # Compost
+
+    Substrate -> M6A
+    Water -> M6A
+#    PatchKits -> M6A #C
+#    RepairKits -> M6A #C
+#    PunchCards -> M6A #C
+    M6A -> WasteWater
+    M6A -> Compost [color = "red"]
+    M6A -> CarbonDioxide
+#    M6A -> Recyclables #C
+#    BasicMachinery -> M6A [color = "green"] #C
+#    EnrichedSoil -> M6A [color = "green"] #C
+#    "MEP-Laboratory" -> M6A [color = "green"] #C
+
+    # BioMass
+
+    Substrate -> M6B
+    Water -> M6B
+#    PatchKits -> M6B #C
+#    RepairKits -> M6B #C
+#    PunchCards -> M6B #C
+    M6B -> WasteWater
+    M6B -> BioMass [color = "red"]
+    M6B -> CarbonDioxide [color = "red"]
+#    M6B -> Recyclables #C
+#    BasicMachinery -> M6B [color = "green"] #C
+#    EnrichedSoil -> M6B [color = "green"] #C
+#    "MEP-Laboratory" -> M6B [color = "green"] #C
+
+# Aeroponics Module
+
+    # Air Filter
+
+    Oxygen -> M7A
+#    PatchKits -> M7A #C
+#    RepairKits -> M7A #C
+#    PunchCards -> M7A #C
+    M7A -> CarbonDioxide [color = "red"]
+#    M7A -> Recyclables #C
+#    BasicMachinery -> M7A [color = "green"] #C
+#    EnrichedSoil -> M7A [color = "green"] #C
+#    "MEP-Environmental" -> M7A [color = "green"] #C
+
+    # Greenhouse
+
+    CarbonDioxide -> M7B
+    Water -> M7B
+    Compost -> M7B
+#    PatchKits -> M7B #C
+#    RepairKits -> M7B #C
+#    PunchCards -> M7B #C
+    M7B -> BioMass [color = "red"]
+    M7B -> Oxygen [color = "red"]
+    M7B -> WasteWater
+#    M7B -> Recyclables #C
+#    BasicMachinery -> M7B [color = "green"] #C
+#    EnrichedSoil -> M7B [color = "green"] #C
+#    "MEP-Environmental" -> M7B [color = "green"] #C
+
+# Kerbitat(tm)
+
+    # Composter
+
+    Waste -> M8A
+#    PatchKits -> M8A #C
+#    RepairKits -> M8A #C
+#    PunchCards -> M8A #C
+    M8A -> Compost [color = "red"]
+#    M8A -> Recyclables #C
+#    BasicMachinery -> M8A [color = "green"] #C
+#    "MEP-Environmental" -> M8A [color = "green"] #C
+
+    # Habitat
+
+    BioMass -> M8B
+#    PatchKits -> M8B #C
+#    RepairKits -> M8B #C
+#    PunchCards -> M8B #C
+    M8B -> Food [color = "red"]
+#    M8B -> Recyclables #C
+#    BasicMachinery -> M8B [color = "green"] #C
+#    "MEP-Environmental" -> M8B [color = "green"] #C
+
+# Orbital Refinery
+
+    # Metals
+
+    Ore -> M9A
+#    PatchKits -> M9A #C
+#    RepairKits -> M9A #C
+#    PunchCards -> M9A #C
+    M9A -> Metal [color = "red"]
+    M9A -> RareMetals [color = "red"]
+#    M9A -> Recyclables #C
+#    BasicMachinery -> M9A [color = "green"] #C
+#    "MEP-Refining" -> M9A [color = "green"] #C
+
+    # Polymers
+
+    BioMass -> M9B
+    Substrate -> M9B
+#    PatchKits -> M9B #C
+#    RepairKits -> M9B #C
+#    PunchCards -> M9B #C
+    M9B -> Polymers [color = "red"]
+#    M9B -> Recyclables #C
+#    BasicMachinery -> M9B [color = "green"] #C
+#    "MEP-Refining" -> M9B [color = "green"] #C
+
+    # Chemicals
+
+    Minerals -> M9C
+#    PatchKits -> M9C #C
+#    RepairKits -> M9C #C
+#    PunchCards -> M9C #C
+    M9C -> Chemicals [color = "red"]
+    M9C -> ExoticMinerals [color = "red"]
+#    M9C -> Recyclables #C
+#    BasicMachinery -> M9C [color = "green"] #C
+#    "MEP-Refining" -> M9C [color = "green"] #C
+
+# Fabrication Module
+
+    # ElectronicParts
+
+    Metal -> M10A
+    Chemicals -> M10A
+#    PatchKits -> M10A #C
+#    RepairKits -> M10A #C
+#    PunchCards -> M10A #C
+    M10A -> ElectronicParts [color = "red"]
+#    M10A -> Recyclables #C
+#    BasicMachinery -> M10A [color = "green"] #C
+#    AdvMachinery -> M10A [color = "green"] #C
+#    "MEP-Manufacturing" -> M10A [color = "green"] #C
+
+    # PlasticPart
+
+    Polymers -> M10B
+    Chemicals -> M10B
+#    PatchKits -> M10B #C
+#    RepairKits -> M10B #C
+#    PunchCards -> M10B #C
+    M10B -> PlasticParts [color = "red"]
+#    M10B -> Recyclables #C
+#    BasicMachinery -> M10B [color = "green"] #C
+#    AdvMachinery -> M10B [color = "green"] #C
+#    "MEP-Manufacturing" -> M10B [color = "green"] #C
+
+    # MechanicalParts
+
+    Polymers -> M10C
+    Metal -> M10C
+#    PatchKits -> M10C #C
+#    RepairKits -> M10C #C
+#    PunchCards -> M10C #C
+    M10C -> MechanicalParts [color = "red"]
+#    M10C -> Recyclables #C
+#    BasicMachinery -> M10C [color = "green"] #C
+#    AdvMachinery -> M10C [color = "green"] #C
+#    "MEP-Manufacturing" -> M10C [color = "green"] #C
+
+# Orbital Factory
+
+    # ModularParts
+
+    PlasticParts -> M11A
+    MechanicalParts -> M11A
+#    PatchKits -> M11A #C
+#    RepairKits -> M11A #C
+#    PunchCards -> M11A #C
+    M11A -> ModularParts [color = "red"]
+#    M11A -> Recyclables #C
+#    BasicMachinery -> M11A [color = "green"] #C
+#    AdvMachinery -> M11A [color = "green"] #C
+#    "MEP-Manufacturing" -> M11A [color = "green"] #C
+
+    # Computers
+
+    PlasticParts -> M11B
+    ElectronicParts -> M11B
+#    PatchKits -> M11B #C
+#    RepairKits -> M11B #C
+#    PunchCards -> M11B #C
+    M11B -> Computers [color = "red"]
+#    M11B -> Recyclables #C
+#    BasicMachinery -> M11B [color = "green"] #C
+#    AdvMachinery -> M11B [color = "green"] #C
+#    "MEP-Manufacturing" -> M11B [color = "green"] #C
+
+    # Robotics
+
+    MechanicalParts -> M11C
+    ElectronicParts -> M11C
+#    PatchKits -> M11C #C
+#    RepairKits -> M11C #C
+#    PunchCards -> M11C #C
+    M11C -> Robotics [color = "red"]
+#    M11C -> Recyclables #C
+#    BasicMachinery -> M11C [color = "green"] #C
+#    AdvMachinery -> M11C [color = "green"] #C
+#    "MEP-Manufacturing" -> M11C [color = "green"] #C
+
+# Assembly Plant
+
+    # MEP-Computing
+
+    Computers -> M12A
+    ReplacementParts -> M12A
+#    PunchCards -> M12A #C
+    M12A -> "MEP-Computing" [color = "red"]
+#    M12A -> Recyclables #C
+#    SpecMachinery -> M12A [color = "green"] #C
+#    "MEP-Manufacturing" -> M12A [color = "green"] #C
+
+    # MEP-Environmental
+
+    ModularParts -> M12B
+    ReplacementParts -> M12B
+#    PunchCards -> M12B #C
+    M12B -> "MEP-Environmental" [color = "red"]
+#    M12B -> Recyclables #C
+#    SpecMachinery -> M12B [color = "green"] #C
+#    "MEP-Manufacturing" -> M12B [color = "green"] #C
+
+    # MEP-Mining
+
+    Robotics -> M12C
+    ReplacementParts -> M12C
+#    PunchCards -> M12C #C
+    M12C -> "MEP-Mining" [color = "red"]
+#    M12C -> Recyclables #C
+#    SpecMachinery -> M12C [color = "green"] #C
+#    "MEP-Manufacturing" -> M12C [color = "green"] #C
+
+    # MEP-Laboratory
+
+    Computers -> M12D
+    ModularParts -> M12D
+    ReplacementParts -> M12D
+#    PunchCards -> M12D #C
+    M12D -> "MEP-Laboratory" [color = "red"]
+#    M12D -> Recyclables #C
+#    SpecMachinery -> M12D [color = "green"] #C
+#    "MEP-Manufacturing" -> M12D [color = "green"] #C
+
+    # MEP-Manufacturing
+
+    Computers -> M12E
+    Robotics -> M12E
+    ReplacementParts -> M12E
+#    PunchCards -> M12E #C
+    M12E -> "MEP-Manufacturing" [color = "red"]
+#    M12E -> Recyclables #C
+#    SpecMachinery -> M12E [color = "green"] #C
+#    "MEP-Manufacturing" -> M12E [color = "green"] #C
+
+    # MEP-Refining
+
+    ModularParts -> M12F
+    Robotics -> M12F
+    ReplacementParts -> M12F
+#    PunchCards -> M12F #C
+    M12F -> "MEP-Refining" [color = "red"]
+#    M12F -> Recyclables #C
+#    SpecMachinery -> M12F [color = "green"] #C
+#    "MEP-Manufacturing" -> M12F [color = "green"] #C
+
+    TITLE [label = "Resource System for USI Kolonization Systems V0.19.5" ] [shape="box"]
+
+
+    M1A [label = "Colony Control Center *\nCommand" ] [shape="box"]
+    M3A [label = "Machinery Plant 3\nSpecMachinery" ] [shape="box"]
+    M3B [label = "Machinery Plant 3\nBasicMachinery" ] [shape="box"]
+    M3C [label = "Machinery Plant 3\nAdvMachinery" ] [shape="box"]
+    M4A [label = "Orbital Repair Shop 4\nRecycle" ] [shape="box"]
+    M4B [label = "Orbital Repair Shop 4\nPatchKits" ] [shape="box"]
+    M4C [label = "Orbital Repair Shop 4\nRepairKits" ] [shape="box"]
+    M4D [label = "Orbital Repair Shop 4\nReplacementParts" ] [shape="box"]
+    M5A [label = "Terraformer 5\nKaO3->H2O" ] [shape="box"]
+    M5B [label = "Terraformer 5\nCultivate" ] [shape="box"]
+    M5C [label = "Terraformer 5\nPurify" ] [shape="box"]
+    M5D [label = "Terraformer 5\nLFO->H2O" ] [shape="box"]
+    M6A [label = "BioLab 6\nCompost" ] [shape="box"]
+    M6B [label = "BioLab 6\nBioMass" ] [shape="box"]
+    M7A [label = "Aeroponics Module 7\nAir Filter" ] [shape="box"]
+    M7B [label = "Aeroponics Module 7\nGreenhouse" ] [shape="box"]
+    M8A [label = "Kerbitat(tm) 8\nComposter" ] [shape="box"]
+    M8B [label = "Kerbitat(tm) 8\nHabitat" ] [shape="box"]
+    M9A [label = "Orbital Refinery 9\nMetals" ] [shape="box"]
+    M9B [label = "Orbital Refinery 9\nPolymers" ] [shape="box"]
+    M9C [label = "Orbital Refinery 9\nChemicals" ] [shape="box"]
+    M10A [label = "Fabrication Module 10\nElectronicParts" ] [shape="box"]
+    M10B [label = "Fabrication Module 10\nPlasticParts" ] [shape="box"]
+    M10C [label = "Fabrication Module 10\nMechanicalParts" ] [shape="box"]
+    M11A [label = "Orbital Factory 11\nModularParts" ] [shape="box"]
+    M11B [label = "Orbital Factory 11\nComputers" ] [shape="box"]
+    M11C [label = "Orbital Factory 11\nRobotics" ] [shape="box"]
+    M12A [label = "Assembly Plant 12\nMEP-Computing" ] [shape="box"]
+    M12B [label = "Assembly Plant 12\nMEP-Environmental" ] [shape="box"]
+    M12C [label = "Assembly Plant 12\nMEP-Mining" ] [shape="box"]
+    M12D [label = "Assembly Plant 12\nMEP-Laboratory" ] [shape="box"]
+    M12E [label = "Assembly Plant 12\nMEP-Manufacturing" ] [shape="box"]
+    M12F [label = "Assembly Plant 12\nMEP-Refining" ] [shape="box"]
+
+}
