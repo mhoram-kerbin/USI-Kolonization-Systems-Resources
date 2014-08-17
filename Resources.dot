@@ -182,7 +182,7 @@ digraph Resources {
             {
                 rank = same;
                 edge [minlen=1];
-                PatchKits -> RepairKits;
+                PatchKits -> RepairKits [style=invisible,arrowhead=none];
             }
             {
                 Recycle -> PatchKits [style=invisible,arrowhead=none];
@@ -200,7 +200,7 @@ digraph Resources {
             ReplacementParts -> Chemicals;
         }
 */
-        edge [minlen=3, color="#666666"];
+        edge [minlen=2, color="#666666"];
 
         CommandP -> Minerals [lhead=clusterProductionLine];
         CommandP -> ReplacementParts [lhead=clusterRepair,constraint = false];
@@ -260,9 +260,10 @@ digraph Resources {
             BasicMachinery;
             AdvMachinery;
             SpecMachinery;
-            BasicMachinery -> AdvMachinery -> SpecMachinery;
+            BasicMachinery -> AdvMachinery -> SpecMachinery [color="#666666"];
         }
 
+        edge [color="#666666"];
 
         RepairKitsE -> BasicMachinery [lhead=clusterMachinery; ltail=clusterRepairE];
 
