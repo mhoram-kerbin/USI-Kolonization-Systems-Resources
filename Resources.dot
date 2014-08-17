@@ -1,5 +1,5 @@
 /*
-Overview over USI Kolonization System Resources V0.19.5
+Overview over USI Kolonization System Resources V0.20.4
 Copyright 2014 By Mhoram
 
 This Work may be distributed under the Creative Commons
@@ -12,9 +12,109 @@ chose.
 # dot -Tpdf -o Resources.pdf Resources.dot
 # dot -Tpng -o Resources.png Resources.dot
 
-digraph Res {
+digraph Resources {
+    compound=true;
+
+    subgraph clusterLIFE {
+        graph [label="Overview of USI Kolonization System Resources V0.20.4 - Keeping Kerbals alive" fontsize=19];
+
+        edge [minlen=3];
+
+        subgraph clusterDRILLS {
+            label="Drilled Resources";
+            Substrate [label="Substrate"];
+            Water;
+        }
+
+        subgraph clusterKerbal {
+            label="Kerbal Products";
+            Waste;
+            WasteWater;
+            CarbonDioxide;
+        }
+
+        subgraph clusterProducts {
+            label="Produced or delivered";
+            PatchKits;
+            RepairKits;
+        }
+
+        subgraph clusterKerbalNeeds {
+            label="Kerbal Needs";
+            WaterN [label="Water"];
+            Oxygen;
+            Food;
+        }
+
+        subgraph clusterCCC {
+            label="Colony Control Center (*)";
+            Command [label="Command\nPunchCards"];
+        }
+
+        subgraph clusterLIFESUPPORT {
+            label="LifeSupport";
+
+            subgraph  {
+                subgraph clusterKerbitat {
+                    label="Kerbitat (8)";
+                    Composter [label="Composter\nCompost"];
+                    Habitat [label="Habitat\nFood"];
+                    {
+                        rank = same;
+                        rankdir=LR;
+                        edge [minlen=0];
+                        Composter->Habitat [style=invisible,arrowhead=none];
+                    }
+                }
+
+                subgraph clusterBIOLAB {
+                    label="BioLab (6)";
+                    BioMass;
+                    Compost;
+                }
+            }
+
+            subgraph clusterAeroponics {
+                label="Aeroponics (7)";
+
+                "Air Filter" [label="Air Filter\nCarbonDioxide"];
+                Greenhouse [label="Greenhouse\nBioMass,Oxygen"];
+                Purify [label="Purify\nWater"];
+            }
+
+            Composter -> Greenhouse;
+            Compost -> Greenhouse;
+            Greenhouse -> Habitat [constraint = false];
+            BioMass -> Habitat [constraint = false];
+
+        }
+#        CarbonDioxide -> Compost [lhead=clusterLIFESUPPORT; ltail=clusterKerbal];
+        Waste -> Composter;
+        WasteWater -> Purify;
+        CarbonDioxide -> Greenhouse;
+
+        PatchKits -> Habitat [lhead=clusterLIFESUPPORT];
+        RepairKits -> BioMass [lhead=clusterLIFESUPPORT];
+
+        "Air Filter" -> Oxygen [lhead=clusterKerbalNeeds; ltail=clusterLIFESUPPORT];
+        Water -> WaterN;
+        Water -> Compost [lhead=clusterLIFESUPPORT];
+        Substrate -> Compost [lhead=clusterBIOLAB];
+
+        Command -> Habitat [lhead=clusterLIFESUPPORT];
 
 
+    }
+
+    subgraph clusterPRODUCTION {
+        graph [label="Overview of USI Kolonization System Resources V0.20.4 - Production Line" fontsize=19];
+        
+    }
+
+
+
+
+/*
 # Colony Control Center
 
 #    ReplacementParts -> M1A #C
@@ -440,8 +540,9 @@ digraph Res {
 #    "MEP-Manufacturing" -> M12F [color = "green"] #C
 
     TITLE [label = "Resource System for USI Kolonization Systems V0.19.5" ] [shape="box"]
+*/
 
-
+/*
     M1A [label = "Colony Control Center *\nCommand" ] [shape="box"]
     M3A [label = "Machinery Plant 3\nSpecMachinery" ] [shape="box"]
     M3B [label = "Machinery Plant 3\nBasicMachinery" ] [shape="box"]
@@ -475,5 +576,5 @@ digraph Res {
     M12D [label = "Assembly Plant 12\nMEP-Laboratory" ] [shape="box"]
     M12E [label = "Assembly Plant 12\nMEP-Manufacturing" ] [shape="box"]
     M12F [label = "Assembly Plant 12\nMEP-Refining" ] [shape="box"]
-
+*/
 }
