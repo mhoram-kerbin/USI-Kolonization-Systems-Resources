@@ -1,0 +1,76 @@
+/* -*- coding: utf-8; -*-
+Overview over USI Kolonization System Resources
+Copyright 2014 By Mhoram
+
+This Work may be distributed under the Creative Commons
+Attribution-ShareAlike 4.0 International or Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License as you
+chose.
+
+*/
+
+# dot -Tpdf -o Resources.pdf Resources.dot
+# dot -Tpng -o Resources.png Resources.dot
+
+digraph Resources {
+    compound=true;
+
+    subgraph clusterEXTENSION {
+        graph [label="Resource-Overview of USI Kolonization System V0.20.4 - Extending the Base" fontsize=19];
+
+
+        subgraph clusterCCCE {
+            label="Colony Control Center (*)";
+            CommandE [label="PunchCards\nNeeded for everything"];
+        }
+
+        subgraph clusterRepairE {
+            label="Repair Shop (4)";
+            RepairKitsE [label="PatchKits\nRepairKits\nReplacementParts"];
+        }
+
+
+        subgraph clusterRefineryE {
+            label="Refinery (9)";
+            PolymersE [label="Metals\nPolymers\nChemicals"];
+        }
+
+        subgraph clusterFabricationE {
+            label="Fabrication (10)"
+            PlasticPartsE [label="ElectronicParts\nPlasticParts\nMechanicalParts"];
+        }
+
+        subgraph clusterFactoryE {
+            label="Factory (11)"
+            ComputersE [label="Computers\nModularParts\nRobotics"];
+        }
+
+        subgraph clusterAssemblyE {
+            label="Assembly (12)"
+            AssemblyE [label="MEP-Environmental\nMEP-Laboratory\nMEP-Manufacturing\nMEP-Refining", color="orange",penwidth=2];
+        }
+
+        subgraph clusterMachinery {
+            label="Machinery Plant (3)";
+            color="orange";penwidth=2;
+            BasicMachinery;
+            AdvMachinery;
+            SpecMachinery;
+            BasicMachinery -> AdvMachinery -> SpecMachinery [color="#666666"];
+        }
+
+        edge [color="#666666"];
+
+        RepairKitsE -> BasicMachinery [lhead=clusterMachinery; ltail=clusterRepairE,weight=10];
+
+        PolymersE -> BasicMachinery[headport=w];
+        PlasticPartsE -> AdvMachinery;
+        ComputersE -> SpecMachinery;
+        CommandE -> PlasticPartsE [style=invisible,arrowhead=none];
+        BasicMachinery -> ComputersE [style=invisible,arrowhead=none];
+        PlasticPartsE -> AssemblyE [style=invisible,arrowhead=none];
+        PolymersE -> ComputersE [style=invisible,arrowhead=none];
+        AdvMachinery -> AssemblyE [style=invisible,arrowhead=none];
+    }
+
+}

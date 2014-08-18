@@ -1,0 +1,133 @@
+/* -*- coding: utf-8; -*-
+Overview over USI Kolonization System Resources
+Copyright 2014 By Mhoram
+
+This Work may be distributed under the Creative Commons
+Attribution-ShareAlike 4.0 International or Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License as you
+chose.
+
+*/
+
+# dot -Tpdf -o Resources.pdf Resources.dot
+# dot -Tpng -o Resources.png Resources.dot
+
+digraph Resources {
+    compound=true;
+
+    subgraph clusterPRODUCTION {
+        graph [label="Resource-Overview of USI Kolonization System V0.20.4 - Creating Goods" fontsize=19];
+
+        subgraph clusterCCCP {
+            label="Colony Control Center (*)";
+            CommandP [label="Command\nPunchCards"];
+        }
+
+        subgraph clusterProductionLine {
+            label="Production Line";
+
+            subgraph clusterBIOLABP {
+                label="BioLab (6)";
+                PBioMass [label="BioMass"];
+            }
+
+            subgraph clusterResources {
+                label="Drilled Resources";
+                WaterR [label="Water"];
+                SubstrateR [label="Substrate"];
+                Ore;
+                Minerals;
+            }
+
+            subgraph clusterRefinery {
+                label="Refinery (9)";
+                Metals;
+                Polymers;
+                Chemicals;
+            }
+
+            subgraph clusterFabrication {
+                label="Fabrication (10)"
+                ElectronicParts;
+                PlasticParts;
+                MechanicalParts;
+            }
+
+            subgraph clusterFactory {
+                label="Factory (11)"
+                ModularParts;
+                Computers;
+                Robotics;
+            }
+
+            subgraph clusterAssembly {
+                label="Assembly (12)";
+                "MEP-Computing";
+                "MEP-Environmental";
+                "MEP-Mining";
+                "MEP-Laboratory";
+                "MEP-Manufacturing";
+                "MEP-Refining";
+            }
+
+            subgraph clusterSpecials {
+                label="Expensive Materials\nfor Sale";
+                ExoticMinerals;
+                RareMetals;
+            }
+        }
+
+        Recyclables [label="Recyclables\n(from nearly all Processes)"];
+
+        subgraph clusterRepair {
+            label="Repair Shop (4)";
+            labeljust="r";
+            PatchKits;
+            RepairKits;
+            ReplacementParts;
+            Recycle [label="Recycle\nChemicals,Polymers,Metal"];
+            edge [color="#666666"];
+            {
+                rank = same;
+                edge [minlen=1];
+                PatchKits -> RepairKits [style=invisible,arrowhead=none];
+            }
+            {
+                Recycle -> PatchKits [style=invisible,arrowhead=none];
+                RepairKits -> ReplacementParts [style=invisible,arrowhead=none];
+            }
+            PatchKits -> PatchKits [tailport=nw,headport=sw];
+            RepairKits -> PatchKits;
+            RepairKits -> RepairKits [tailport=ne,headport=se];
+            ReplacementParts -> RepairKits [constraint = false];
+            ReplacementParts -> ReplacementParts [tailport=nw,headport=sw];
+        }
+
+/*        {
+            rank = same;
+            ReplacementParts -> Chemicals;
+        }
+*/
+        edge [minlen=2, color="#666666"];
+
+        CommandP -> Minerals [lhead=clusterProductionLine];
+        CommandP -> ReplacementParts [lhead=clusterRepair,constraint = false];
+        ReplacementParts -> Ore [lhead=clusterProductionLine,ltail=clusterRepair];
+        PBioMass -> Polymers [penwidth=2, color="orange"];
+        SubstrateR -> PBioMass [headport=e, penwidth=2, color="orange"];
+        WaterR -> PBioMass [tailport=sw,headport=w, penwidth=2, color="orange"];
+        SubstrateR -> ReplacementParts [ltail=clusterProductionLine,lhead=clusterRepair];
+
+        Polymers -> ExoticMinerals [ltail=clusterRefinery,lhead=clusterSpecials];
+        Ore -> Chemicals [lhead=clusterRefinery; ltail=clusterResources, penwidth=2, color="orange"];
+
+        Chemicals -> PlasticParts [lhead=clusterFabrication; ltail=clusterRefinery, penwidth=2, color="orange"];
+
+        PlasticParts -> Computers [lhead=clusterFactory; ltail=clusterFabrication, penwidth=2, color="orange"];
+
+        Computers -> "MEP-Mining" [lhead=clusterAssembly; ltail=clusterFactory, penwidth=2, color="orange"];
+
+        Recyclables -> Recycle [tailport=sw,headport=nw];
+    }
+
+}

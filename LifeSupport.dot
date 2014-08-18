@@ -1,0 +1,114 @@
+/* -*- coding: utf-8; -*-
+Overview over USI Kolonization System Resources
+Copyright 2014 By Mhoram
+
+This Work may be distributed under the Creative Commons
+Attribution-ShareAlike 4.0 International or Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License as you
+chose.
+
+*/
+
+# dot -Tpdf -o Resources.pdf Resources.dot
+# dot -Tpng -o Resources.png Resources.dot
+
+digraph Resources {
+    compound=true;
+
+    subgraph clusterLIFE {
+        graph [label="Resource-Overview of USI Kolonization System V0.20.4 - Keeping Kerbals alive" fontsize=19];
+
+        subgraph clusterDRILLS {
+            label="Drilled Resources";
+            LSubstrate [label="Substrate"];
+            Water;
+        }
+
+        subgraph clusterProducts {
+            label="Produced or delivered";
+            PatchKitsL [label="PatchKits"];
+            RepairKitsL [label="RepairKits"];
+        }
+
+        subgraph clusterCCC {
+            label="Colony Control Center (*)";
+            Command [label="Command\nPunchCards"];
+        }
+
+        subgraph clusterKerbal {
+            label="Kerbal Products";
+            Waste;
+            WasteWater;
+            CarbonDioxide;
+            Waste -> CarbonDioxide [weight=10,style=invisible,arrowhead=none];
+            Waste -> WasteWater [style=invisible,arrowhead=none];
+        }
+
+        subgraph clusterKerbalNeeds {
+            label="Kerbal Needs";
+            WaterN [label="Water"];
+            Oxygen;
+            Food;
+        }
+
+        subgraph clusterLIFESUPPORT {
+            label="LifeSupport";
+            color="orange";penwidth=2;
+            subgraph  {
+                color="black";penwidth=1;
+                subgraph clusterKerbitat {
+                    label="Kerbitat (8)";
+                    Composter [label="Composter\nCompost"];
+                    Habitat [label="Habitat\nFood"];
+                    {
+                        rank = same;
+                        rankdir=LR;
+                        edge [minlen=0];
+                        Composter->Habitat [style=invisible,arrowhead=none];
+                    }
+                }
+
+                subgraph clusterBIOLAB {
+                    label="BioLab (6)";
+                    BioMass;
+                    Compost;
+                }
+            }
+
+            subgraph clusterAeroponics {
+                label="Aeroponics (7)";
+                labeljust="r";
+                color="black"; penwidth=1;
+                "Air Filter" [label="Air Filter\n(optional)\nCarbonDioxide"];
+                Greenhouse [label="Greenhouse\nBioMass,Oxygen"];
+                Purify [label="Purify\nWater"];
+            }
+
+            edge [minlen=2, color="#666666"];
+            Composter -> Greenhouse;
+            Greenhouse -> Habitat [constraint = false];
+            BioMass -> Habitat [constraint = false];
+            Compost -> Greenhouse;
+
+        }
+
+        edge [minlen=3, color="#666666"];
+
+
+        Waste -> Composter;
+        WasteWater -> Purify;
+        CarbonDioxide -> Greenhouse [tailport=se, weight=2];
+
+        PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT];
+        RepairKitsL -> BioMass [lhead=clusterLIFESUPPORT];
+
+        "Air Filter" -> Oxygen [lhead=clusterKerbalNeeds; ltail=clusterLIFESUPPORT];
+        Water -> WaterN;
+        Water -> Compost [lhead=clusterLIFESUPPORT];
+        LSubstrate -> Compost [lhead=clusterBIOLAB];
+
+        Command -> Habitat [lhead=clusterLIFESUPPORT];
+
+    }
+
+}
