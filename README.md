@@ -7,3 +7,5 @@ It may be distributed under the Creative Commons
 Attribution-ShareAlike 4.0 International or Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License as you
 chose.
+
+PDF's are available in the release section and images here: http://imgur.com/a/VpxLq
