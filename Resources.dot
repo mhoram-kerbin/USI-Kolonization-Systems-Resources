@@ -1,4 +1,4 @@
-/*
+/* -*- coding: utf-8; -*-
 Overview over USI Kolonization System Resources V0.20.4
 Copyright 2014 By Mhoram
 
@@ -40,6 +40,8 @@ digraph Resources {
             Waste;
             WasteWater;
             CarbonDioxide;
+            Waste -> CarbonDioxide [weight=10,style=invisible,arrowhead=none];
+            Waste -> WasteWater [style=invisible,arrowhead=none];
         }
 
         subgraph clusterKerbalNeeds {
@@ -77,7 +79,7 @@ digraph Resources {
                 label="Aeroponics (7)";
                 labeljust="r";
                 color="black"; penwidth=1;
-                "Air Filter" [label="Air Filter\nCarbonDioxide"];
+                "Air Filter" [label="Air Filter\n(optional)\nCarbonDioxide"];
                 Greenhouse [label="Greenhouse\nBioMass,Oxygen"];
                 Purify [label="Purify\nWater"];
             }
@@ -89,12 +91,13 @@ digraph Resources {
             Compost -> Greenhouse;
 
         }
-#        CarbonDioxide -> Compost [lhead=clusterLIFESUPPORT; ltail=clusterKerbal];
+
         edge [minlen=3, color="#666666"];
+
 
         Waste -> Composter;
         WasteWater -> Purify;
-        CarbonDioxide -> Greenhouse;
+        CarbonDioxide -> Greenhouse [tailport=se, weight=2];
 
         PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT];
         RepairKitsL -> BioMass [lhead=clusterLIFESUPPORT];
@@ -126,6 +129,7 @@ digraph Resources {
 
             subgraph clusterResources {
                 label="Drilled Resources";
+                WaterR [label="Water"];
                 SubstrateR [label="Substrate"];
                 Ore;
                 Minerals;
@@ -206,7 +210,8 @@ digraph Resources {
         CommandP -> ReplacementParts [lhead=clusterRepair,constraint = false];
         ReplacementParts -> Ore [lhead=clusterProductionLine,ltail=clusterRepair];
         PBioMass -> Polymers [penwidth=2, color="orange"];
-        SubstrateR -> PBioMass [tailport=sw,headport=w, penwidth=2, color="orange"];
+        SubstrateR -> PBioMass [headport=e, penwidth=2, color="orange"];
+        WaterR -> PBioMass [tailport=sw,headport=w, penwidth=2, color="orange"];
         SubstrateR -> ReplacementParts [ltail=clusterProductionLine,lhead=clusterRepair];
 
         Polymers -> ExoticMinerals [ltail=clusterRefinery,lhead=clusterSpecials];
@@ -254,6 +259,11 @@ digraph Resources {
             ComputersE [label="Computers\nModularParts\nRobotics"];
         }
 
+        subgraph clusterAssemblyE {
+            label="Assembly (12)"
+            AssemblyE [label="MEP-Environmental\nMEP-Laboratory\nMEP-Manufacturing\nMEP-Refining", color="orange",penwidth=2];
+        }
+
         subgraph clusterMachinery {
             label="Machinery Plant (3)";
             color="orange";penwidth=2;
@@ -265,11 +275,14 @@ digraph Resources {
 
         edge [color="#666666"];
 
-        RepairKitsE -> BasicMachinery [lhead=clusterMachinery; ltail=clusterRepairE];
+        RepairKitsE -> BasicMachinery [lhead=clusterMachinery; ltail=clusterRepairE,weight=10];
 
-        PolymersE -> BasicMachinery[ltail=clusterRefineryE,headport=w];
-        PlasticPartsE -> AdvMachinery[ltail=clusterFabricationE];
-        ComputersE -> SpecMachinery[ltail=clusterFactoryE];
+        PolymersE -> BasicMachinery[headport=e];
+        PlasticPartsE -> AdvMachinery;
+        ComputersE -> SpecMachinery;
+        CommandE -> PlasticPartsE [style=invisible,arrowhead=none];
+        PlasticPartsE -> AssemblyE [style=invisible,arrowhead=none];
+        AdvMachinery -> AssemblyE [style=invisible,arrowhead=none];
     }
 
     # make the graphs appear below each other
