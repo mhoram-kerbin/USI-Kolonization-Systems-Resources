@@ -46,13 +46,13 @@ digraph Resources {
 
         subgraph clusterKerbalNeeds {
             label="Kerbal Needs";
-            WaterN [label="Water"];
             Oxygen;
             Food;
+            WaterN [label="Water"];
         }
 
         subgraph clusterLIFESUPPORT {
-            label="LifeSupport";
+            label="Life Support";
             color="orange";penwidth=2;
             subgraph  {
                 color="black";penwidth=1;
@@ -69,7 +69,7 @@ digraph Resources {
                 }
 
                 subgraph clusterBIOLAB {
-                    label="BioLab (6)";
+                    label="BioLab (6)\n(Extended Life Support)";
                     BioMass;
                     Compost;
                 }
@@ -82,6 +82,9 @@ digraph Resources {
                 "Air Filter" [label="Air Filter\n(optional)\nCarbonDioxide"];
                 Greenhouse [label="Greenhouse\nBioMass,Oxygen"];
                 Purify [label="Purify\nWater"];
+                edge [color="#666666"];
+
+                Purify -> Greenhouse[constraint = false];
             }
 
             edge [minlen=2, color="#666666"];
@@ -92,22 +95,32 @@ digraph Resources {
 
         }
 
+        subgraph clusterRecyclablesL {
+            label="Waste Procucts";
+            RecyclablesL [label="Recyclables"];
+            Oxygen;
+            Food;
+        }
+
+
         edge [minlen=3, color="#666666"];
 
 
         Waste -> Composter;
         WasteWater -> Purify;
-        CarbonDioxide -> Greenhouse [tailport=se, weight=2];
+        CarbonDioxide -> Greenhouse [];
 
-        PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT];
-        RepairKitsL -> BioMass [lhead=clusterLIFESUPPORT];
+        PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT,ltail=clusterProducts];
+        RepairKitsL -> BioMass [lhead=clusterLIFESUPPORT,style=invisible,arrowhead=none];
 
         "Air Filter" -> Oxygen [lhead=clusterKerbalNeeds; ltail=clusterLIFESUPPORT];
         Water -> WaterN;
-        Water -> Compost [lhead=clusterLIFESUPPORT];
-        LSubstrate -> Compost [lhead=clusterBIOLAB];
+#        Water -> Compost [lhead=clusterBIOLAB];
+        LSubstrate -> Compost [lhead=clusterBIOLAB,ltail=clusterDRILLS,weight=2];
 
-        Command -> Habitat [lhead=clusterLIFESUPPORT];
+        Command -> Habitat [lhead=clusterLIFESUPPORT, weight=2];
+
+        Greenhouse -> RecyclablesL [ltail=clusterLIFESUPPORT,lhead=clusterRecyclablesL];
 
     }
 
