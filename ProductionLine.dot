@@ -9,8 +9,8 @@ chose.
 
 */
 
-# dot -Tpdf -o Resources.pdf Resources.dot
-# dot -Tpng -o Resources.png Resources.dot
+# dot -Tpdf -o ProductionLine.pdf ProductionLine.dot
+# dot -Tpng -o ProductionLine.png ProductionLine.dot
 
 digraph Resources {
     compound=true;
@@ -112,7 +112,7 @@ digraph Resources {
 
         CommandP -> Minerals [lhead=clusterProductionLine];
         CommandP -> ReplacementParts [lhead=clusterRepair,constraint = false];
-        ReplacementParts -> Ore [lhead=clusterProductionLine,ltail=clusterRepair];
+        ReplacementParts -> Ore [lhead=clusterProductionLine,ltail=clusterRepair,tailport=se];
         PBioMass -> Polymers [penwidth=2, color="orange"];
         SubstrateR -> PBioMass [headport=e, penwidth=2, color="orange"];
         WaterR -> PBioMass [tailport=sw,headport=w, penwidth=2, color="orange"];

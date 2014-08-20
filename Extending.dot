@@ -9,7 +9,7 @@ chose.
 
 */
 
-# dot -Tpdf -o Resources.pdf Resources.dot
+# dot -Tpdf -o Extending.pdf Extending.dot
 # dot -Tpng -o Resources.png Resources.dot
 
 digraph Resources {
@@ -56,7 +56,7 @@ digraph Resources {
             BasicMachinery;
             AdvMachinery;
             SpecMachinery;
-            BasicMachinery -> AdvMachinery -> SpecMachinery [color="#666666"];
+            BasicMachinery -> AdvMachinery -> SpecMachinery [color="#666666",weight=10];
         }
 
         edge [color="#666666"];

@@ -9,8 +9,8 @@ chose.
 
 */
 
-# dot -Tpdf -o Resources.pdf Resources.dot
-# dot -Tpng -o Resources.png Resources.dot
+# dot -Tpdf -o LifeSupport.pdf LifeSupport.dot
+# dot -Tpng -o LifeSupport.png LifeSupport.dot
 
 digraph Resources {
     compound=true;
@@ -88,7 +88,7 @@ digraph Resources {
             }
 
             edge [minlen=2, color="#666666"];
-            Composter -> Greenhouse;
+            Composter -> Greenhouse [tailport=se];
             Greenhouse -> Habitat [constraint = false];
             BioMass -> Habitat [constraint = false];
             Compost -> Greenhouse;
@@ -107,20 +107,21 @@ digraph Resources {
 
 
         Waste -> Composter;
-        WasteWater -> Purify;
+        WasteWater -> Purify [headport=w];
         CarbonDioxide -> Greenhouse [];
 
-        PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT,ltail=clusterProducts];
+        PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT,ltail=clusterProducts,tailport=e];
         RepairKitsL -> BioMass [lhead=clusterLIFESUPPORT,style=invisible,arrowhead=none];
 
-        "Air Filter" -> Oxygen [lhead=clusterKerbalNeeds; ltail=clusterLIFESUPPORT];
-        Water -> WaterN;
+        "Air Filter" -> Oxygen [lhead=clusterKerbalNeeds; ltail=clusterLIFESUPPORT,tailport=w];
+        Water -> WaterN [headport=ne];
 #        Water -> Compost [lhead=clusterBIOLAB];
-        LSubstrate -> Compost [lhead=clusterBIOLAB,ltail=clusterDRILLS,weight=2];
+        LSubstrate -> Compost [lhead=clusterBIOLAB,ltail=clusterDRILLS,style=invisible,arrowhead=none];
+        Water -> Compost [lhead=clusterBIOLAB,ltail=clusterDRILLS, tailport=nw,headport=n];
 
         Command -> Habitat [lhead=clusterLIFESUPPORT, weight=2];
 
-        Greenhouse -> RecyclablesL [ltail=clusterLIFESUPPORT,lhead=clusterRecyclablesL];
+        Greenhouse -> RecyclablesL [ltail=clusterLIFESUPPORT,lhead=clusterRecyclablesL,tailport=ne];
 
     }
 
