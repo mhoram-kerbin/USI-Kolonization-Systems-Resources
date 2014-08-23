@@ -8,4 +8,4 @@ Attribution-ShareAlike 4.0 International or Creative Commons
 Attribution-NonCommercial-ShareAlike 4.0 International License as you
 chose.
 
-The Graphics are available in the [release secion](https://github.com/mhoram-kerbin/USI-Kolonization-Systems-Resources/releases/latest) or as a [galery](http://imgur.com/a/VpxLq).
+The Graphics are available in the [release secion](https://github.com/mhoram-kerbin/USI-Kolonization-Systems-Resources/releases/latest) or as a [gallery](http://imgur.com/a/VpxLq).
