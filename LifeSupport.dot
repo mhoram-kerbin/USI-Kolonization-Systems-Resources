@@ -16,7 +16,7 @@ digraph Resources {
     compound=true;
 
     subgraph clusterLIFE {
-        graph [label="Resource-Overview of USI Kolonization System V0.20.4 - Keeping Kerbals alive" fontsize=19];
+        graph [label="Resource-Overview of USI Kolonization System V0.20 - Keeping Kerbals alive" fontsize=19];
 
         subgraph clusterDRILLS {
             label="Drilled Resources";
@@ -84,12 +84,12 @@ digraph Resources {
                 Purify [label="Purify\nWater"];
                 edge [color="#666666"];
 
-                Purify -> Greenhouse[constraint = false];
+                Purify -> Greenhouse[constraint = false,color=orange];
             }
 
             edge [minlen=2, color="#666666"];
-            Composter -> Greenhouse [tailport=se];
-            Greenhouse -> Habitat [constraint = false];
+            Composter -> Greenhouse [tailport=se,color=orange];
+            Greenhouse -> Habitat [constraint = false,color=orange];
             BioMass -> Habitat [constraint = false];
             Compost -> Greenhouse;
 
@@ -106,20 +106,20 @@ digraph Resources {
         edge [minlen=3, color="#666666"];
 
 
-        Waste -> Composter;
-        WasteWater -> Purify [headport=w];
-        CarbonDioxide -> Greenhouse [];
+        Waste -> Composter [color=orange];
+        WasteWater -> Purify [headport=w,color=orange];
+        CarbonDioxide -> Greenhouse [color=orange];
 
-        PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT,ltail=clusterProducts,tailport=e];
+        PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT,ltail=clusterProducts,tailport=e,color=orange];
         RepairKitsL -> BioMass [lhead=clusterLIFESUPPORT,style=invisible,arrowhead=none];
 
-        "Air Filter" -> Oxygen [lhead=clusterKerbalNeeds; ltail=clusterLIFESUPPORT,tailport=w];
+        "Air Filter" -> Oxygen [lhead=clusterKerbalNeeds; ltail=clusterLIFESUPPORT,tailport=w,color=orange];
         Water -> WaterN [headport=ne];
 #        Water -> Compost [lhead=clusterBIOLAB];
         LSubstrate -> Compost [lhead=clusterBIOLAB,ltail=clusterDRILLS,style=invisible,arrowhead=none];
         Water -> Compost [lhead=clusterBIOLAB,ltail=clusterDRILLS, tailport=nw,headport=n];
 
-        Command -> Habitat [lhead=clusterLIFESUPPORT, weight=2];
+        Command -> Habitat [lhead=clusterLIFESUPPORT, weight=2,color=orange];
 
         Greenhouse -> RecyclablesL [ltail=clusterLIFESUPPORT,lhead=clusterRecyclablesL,tailport=ne];
 

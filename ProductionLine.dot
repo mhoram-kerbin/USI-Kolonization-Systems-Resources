@@ -16,7 +16,7 @@ digraph Resources {
     compound=true;
 
     subgraph clusterPRODUCTION {
-        graph [label="Resource-Overview of USI Kolonization System V0.20.4 - Creating Goods" fontsize=19];
+        graph [label="Resource-Overview of USI Kolonization System V0.20 - Creating Goods" fontsize=19];
 
         subgraph clusterCCCP {
             label="Colony Control Center (*)";
@@ -113,9 +113,9 @@ digraph Resources {
         CommandP -> Minerals [lhead=clusterProductionLine];
         CommandP -> ReplacementParts [lhead=clusterRepair,constraint = false];
         ReplacementParts -> Ore [lhead=clusterProductionLine,ltail=clusterRepair,tailport=se];
-        PBioMass -> Polymers [penwidth=2, color="orange"];
-        SubstrateR -> PBioMass [headport=e, penwidth=2, color="orange"];
-        WaterR -> PBioMass [tailport=sw,headport=w, penwidth=2, color="orange"];
+        PBioMass -> Polymers [];
+        SubstrateR -> PBioMass [headport=e];
+        WaterR -> PBioMass [tailport=sw,headport=w];
         SubstrateR -> ReplacementParts [ltail=clusterProductionLine,lhead=clusterRepair];
 
         Polymers -> ExoticMinerals [ltail=clusterRefinery,lhead=clusterSpecials];
