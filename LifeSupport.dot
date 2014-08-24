@@ -28,11 +28,17 @@ digraph Resources {
             label="Produced or delivered";
             PatchKitsL [label="PatchKits"];
             RepairKitsL [label="RepairKits"];
+            ReplacementParts;
+
+            ReplacementParts -> RepairKitsL [style=invisible,arrowhead=none];
+            ReplacementParts -> PatchKitsL [style=invisible,arrowhead=none];
         }
 
         subgraph clusterCCC {
             label="Colony Control Center (*)";
             Command [label="Command\nPunchCards"];
+            InvCCC [style=invisible];
+            InvCCC -> Command [style=invisible,arrowhead=none];
         }
 
         subgraph clusterKerbal {
@@ -110,7 +116,7 @@ digraph Resources {
         WasteWater -> Purify [headport=w,color=orange];
         CarbonDioxide -> Greenhouse [color=orange];
 
-        PatchKitsL -> Habitat [lhead=clusterLIFESUPPORT,ltail=clusterProducts,tailport=e,color=orange];
+        RepairKitsL -> Habitat [lhead=clusterLIFESUPPORT,ltail=clusterProducts,tailport=e,color=orange];
         RepairKitsL -> BioMass [lhead=clusterLIFESUPPORT,style=invisible,arrowhead=none];
 
         "Air Filter" -> Oxygen [lhead=clusterKerbalNeeds; ltail=clusterLIFESUPPORT,tailport=w,color=orange];
@@ -122,6 +128,8 @@ digraph Resources {
         Command -> Habitat [lhead=clusterLIFESUPPORT, weight=2,color=orange];
 
         Greenhouse -> RecyclablesL [ltail=clusterLIFESUPPORT,lhead=clusterRecyclablesL,tailport=ne];
+
+        ReplacementParts -> Command [constraint = false,color=orange];
 
     }
 

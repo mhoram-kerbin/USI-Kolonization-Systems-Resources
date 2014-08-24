@@ -108,10 +108,12 @@ digraph Resources {
             ReplacementParts -> Chemicals;
         }
 */
-        edge [minlen=2, color="#666666"];
+        edge [color="#666666"];
+        edge [minlen=2];
+        ReplacementParts -> CommandP [constraint = false];
+        CommandP -> ReplacementParts [lhead=clusterRepair,constraint = false,tailport=sw,headport=se];
 
         CommandP -> Minerals [lhead=clusterProductionLine];
-        CommandP -> ReplacementParts [lhead=clusterRepair,constraint = false];
         ReplacementParts -> Ore [lhead=clusterProductionLine,ltail=clusterRepair,tailport=se];
         PBioMass -> Polymers [];
         SubstrateR -> PBioMass [headport=e];
@@ -128,6 +130,7 @@ digraph Resources {
         Computers -> "MEP-Mining" [lhead=clusterAssembly; ltail=clusterFactory, penwidth=2, color="orange"];
 
         Recyclables -> Recycle [tailport=sw,headport=nw];
+
     }
 
 }
