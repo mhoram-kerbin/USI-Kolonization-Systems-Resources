@@ -56,7 +56,7 @@ digraph Resources {
             BasicMachinery;
             AdvMachinery;
             SpecMachinery;
-            BasicMachinery -> AdvMachinery -> SpecMachinery [color="#666666",weight=10];
+            BasicMachinery -> AdvMachinery -> SpecMachinery [style=invisible,arrowhead=none,weight=10];
         }
 
         edge [color="#666666"];
