@@ -1,0 +1,33 @@
+/* -*- coding: utf-8; -*-
+Overview over USI Kolonization System Resources
+Copyright 2014 By Mhoram
+
+This Work may be distributed under the Creative Commons
+Attribution-ShareAlike 4.0 International or Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License as you
+chose.
+
+*/
+
+# dot -Tpng -o Food.png Food.dot
+
+digraph Food {
+    layout="circo";
+    root=Kerbal;
+
+    Greenhouse [label="Aeroponics\nGreenhouse", shape=box];
+    Habitat [label="Kerbitat(tm)\nHabitat", shape=box];
+    Composter [label="Kerbitat(tm)\nComposter", shape=box];
+    Kerbal [label="Kerbal", shape=box];
+
+
+    Kerbal -> Waste [label="0,169 u/d"];
+    Waste -> Composter [label="-0,337 u/d"];
+    Composter -> Compost [label="0,337 u/d"];
+    Compost -> Greenhouse [label="-0,337 u/d"];
+    Greenhouse -> BioMass [label="0,467 u/d"];
+    BioMass -> Habitat [taillabel="-0,467 u/d";labeldistance=2];
+    Habitat -> Food [label="0,467 u/d"];
+    Food -> Kerbal [label="-0,224 u/d"];
+
+}

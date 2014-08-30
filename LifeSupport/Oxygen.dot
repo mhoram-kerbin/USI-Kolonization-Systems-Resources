@@ -1,0 +1,32 @@
+/* -*- coding: utf-8; -*-
+Overview over USI Kolonization System Resources
+Copyright 2014 By Mhoram
+
+This Work may be distributed under the Creative Commons
+Attribution-ShareAlike 4.0 International or Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License as you
+chose.
+
+*/
+
+# dot -Tpng -o Oxygen.png Oxygen.dot
+
+digraph Oxygen {
+    rankdir="LR";
+
+    Kerbal [label="Kerbal", shape=box];
+    Greenhouse [label="Aeroponics\nGreenhouse", shape=box];
+
+    {
+        rank=same;
+        Kerbal;
+        Greenhouse;
+    }
+
+    CarbonDioxide -> Greenhouse [label="-130,89 u/d",constraint=none];
+    Greenhouse -> Oxygen [label="152,13 u/d",constraint=none];
+
+    Oxygen -> Kerbal [label="-76,07 u/d"];
+    Kerbal -> CarbonDioxide [label="65,44 u/d"];
+
+}

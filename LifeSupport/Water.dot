@@ -1,0 +1,32 @@
+/* -*- coding: utf-8; -*-
+Overview over USI Kolonization System Resources
+Copyright 2014 By Mhoram
+
+This Work may be distributed under the Creative Commons
+Attribution-ShareAlike 4.0 International or Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License as you
+chose.
+
+*/
+
+# dot -Tpng -o Water.png Water.dot
+
+digraph Water {
+    rankdir="LR";
+
+    Kerbal [label="Kerbal", shape=box];
+    Purify [label="Aeroponics\nPurify", shape=box];
+
+    {
+        rank=same;
+        Kerbal;
+        Purify;
+    }
+
+    WasteWater -> Purify [label="-445 u/d",constraint=none];
+    Purify -> Water [label="404 u/d",constraint=none];
+
+    Water -> Kerbal [label="-0,449 u/d"];
+    Kerbal -> WasteWater [label="0,494 u/d"];
+
+}
