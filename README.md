@@ -6,7 +6,7 @@ This is an overview over the Resource-System of the Modular Kolonization Systems
 BasePlanning.xlsx is a Spreadsheet for calculating the efficiency of Bases. It supports
 - All MKS and OKS converters and drills
 - Karbonite Drills and Generator
-- TAC-LS V0.9.x
+- TAC-LS V0.10
 - Multiple Bases
 - Proxy Logistics
 
