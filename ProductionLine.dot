@@ -14,7 +14,7 @@ digraph Resources {
     compound=true;
 
     subgraph clusterPRODUCTION {
-        graph [label="Resource-Overview of USI Kolonization System V0.20 - Creating Goods" fontsize=19];
+        graph [label="Resource-Overview of USI Kolonization System V0.21 - Creating Goods" fontsize=19];
 
         subgraph clusterCCCP {
             label="Colony Control Center (*)";

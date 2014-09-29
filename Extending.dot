@@ -14,7 +14,7 @@ digraph Resources {
     compound=true;
 
     subgraph clusterEXTENSION {
-        graph [label="Resource-Overview of USI Kolonization System V0.20 - Extending the Base" fontsize=19];
+        graph [label="Resource-Overview of USI Kolonization System V0.21 - Extending the Base" fontsize=19];
 
 
         subgraph clusterCCCE {

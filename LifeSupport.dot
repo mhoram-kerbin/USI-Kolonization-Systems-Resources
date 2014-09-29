@@ -14,7 +14,7 @@ digraph Resources {
     compound=true;
 
     subgraph clusterLIFE {
-        graph [label="Resource-Overview of USI Kolonization System V0.20 - Keeping Kerbals alive" fontsize=19];
+        graph [label="Resource-Overview of USI Kolonization System V0.21 - Keeping Kerbals alive" fontsize=19];
 
         subgraph clusterDRILLS {
             label="Drilled Resources";
