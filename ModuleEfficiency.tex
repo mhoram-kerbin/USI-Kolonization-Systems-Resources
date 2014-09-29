@@ -1,10 +1,10 @@
 % USI Kolonization Systems Efficiency Calculation
 % This work is licensed under the Creative Commons
 % Attribution-NonCommercial-ShareAlike 4.0 International License.
-\documentclass[10pt]{report}
+\documentclass[11pt]{report}
 
 \usepackage[utf8]{inputenc}
-\usepackage[a3paper]{geometry}
+\usepackage[a4paper]{geometry}
 \usepackage[pdfstartview=Fit,pdfpagelayout=SinglePage,breaklinks=true]{hyperref}
 \usepackage{breakurl}
 \usepackage{multicol}
@@ -33,7 +33,6 @@ and contain a module X specified by:
 \begin{align*}
   k & := \textrm{ Number of Kerbals in this Module}\\
   s & := \textrm{ Sum of the stupidity of all Kerbals in this module}\\
-  r & := \textrm{ Number of running Converters in this module}
 \end{align*}
 
 As support functions and constants we will need
@@ -66,9 +65,10 @@ b(x) & := \left\{
 Then the efficiency $e(X)$ of all running converters in module X is in
 a single simple and nifty equation:
 
-$$
-e(X) := \max\left(ce_K\left(\frac{\min\left(\max\left(\frac{1}{K}\left(2H_M+10H_O+\frac{C}{10}\right), 0.5\right), 1.5\right)\cdot \frac{K - k}{2}+(2k-s)\cdot \frac{2W+M+\frac{1}{4}C}{K}}{R}\right)+ b\left(\frac{ep(X)-t(X)}{t(X)}\right), 0.25\right)
-$$
+\begin{align*}
+  e(X) & := \max\left(ce_K\left(\frac{\min\left(\max\left(\frac{1}{K}\left(2H_M+10H_O+\frac{C}{10}\right), 0.5\right), 1.5\right)\cdot \frac{K - k}{2}+(2k-s)\cdot \frac{2W+M+\frac{1}{4}C}{K}}{R}\right)\right.\\
+    & \left.+ b\left(\frac{ep(X)-t(X)}{t(X)}\right), 0.25\right)
+\end{align*}
 
 or with a little bit more explanation
 \begin{align*}
