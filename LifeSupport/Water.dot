@@ -13,23 +13,23 @@ digraph Water {
     rankdir="LR";
 
     Kerbal [label="Kerbal", shape=box];
-    OksPurify [label="OKS Aeroponics\nPurify", shape=box];
-    MksPurify [label="MKS Aeroponics\nPurify", shape=box];
+    MksPurify [label="MKS Aeroponics\nPurify @ 100%", shape=box];
+    OksPurify [label="OKS Aeroponics\nPurify @ 100%", shape=box];
 
     {
         rank=same;
+        MksPurify;
         OksPurify;
         Kerbal;
-        MksPurify;
     }
 
-    WasteWater -> OksPurify [label="-692 u/d",constraint=none];
-    OksPurify -> Water [label="544 u/d",constraint=none];
+    WasteWater -> MksPurify [label="-277 u/d",constraint=none];
+    MksPurify -> Water [label="217 u/d",constraint=none];
 
     Water -> Kerbal [label="-0,242 u/d"];
     Kerbal -> WasteWater [label="0,307 u/d"];
 
-    WasteWater -> MksPurify [label="-277 u/d",constraint=none];
-    MksPurify -> Water [label="217 u/d",constraint=none];
+    WasteWater -> OksPurify [label="-692 u/d",constraint=none];
+    OksPurify -> Water [label="544 u/d",constraint=none];
 
 }

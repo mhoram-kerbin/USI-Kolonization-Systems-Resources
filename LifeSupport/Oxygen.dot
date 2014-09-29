@@ -13,8 +13,8 @@ digraph Oxygen {
     rankdir="LR";
 
     Kerbal [label="Kerbal", shape=box];
-    MksGreenhouse [label="MKS Aeroponics\nGreenhouse", shape=box];
-    OksGreenhouse [label="OKS Aeroponics\nGreenhouse", shape=box];
+    MksGreenhouse [label="MKS Aeroponics\nGreenhouse @ 100%", shape=box];
+    OksGreenhouse [label="OKS Aeroponics\nGreenhouse @ 100%", shape=box];
 
     {
         rank=same;
