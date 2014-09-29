@@ -13,18 +13,23 @@ digraph Oxygen {
     rankdir="LR";
 
     Kerbal [label="Kerbal", shape=box];
-    Greenhouse [label="Aeroponics\nGreenhouse", shape=box];
+    MksGreenhouse [label="MKS Aeroponics\nGreenhouse", shape=box];
+    OksGreenhouse [label="OKS Aeroponics\nGreenhouse", shape=box];
 
     {
         rank=same;
         Kerbal;
-        Greenhouse;
+        MksGreenhouse;
+        OksGreenhouse;
     }
 
-    CarbonDioxide -> Greenhouse [label="-130,89 u/d",constraint=none];
-    Greenhouse -> Oxygen [label="152,13 u/d",constraint=none];
+    CarbonDioxide -> OksGreenhouse [label="-159,85, u/d",constraint=none];
+    OksGreenhouse -> Oxygen [label="185,06 u/d",constraint=none];
 
-    Oxygen -> Kerbal [label="-76,07 u/d"];
-    Kerbal -> CarbonDioxide [label="65,44 u/d"];
+    CarbonDioxide -> MksGreenhouse [label="-63,94 u/d",constraint=none];
+    MksGreenhouse -> Oxygen [label="74,02 u/d",constraint=none];
+
+    Oxygen -> Kerbal [label="-37,01 u/d"];
+    Kerbal -> CarbonDioxide [label="31,97 u/d"];
 
 }
