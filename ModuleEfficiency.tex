@@ -14,7 +14,7 @@
 
 \begin{document}
 
-Calculation of Module Efficiency in USI Kolonization Systems v0.20.9 - v0.21.1
+Calculation of Module Efficiency in USI Kolonization Systems v0.20.9 - v0.21.0
 
 Let a base be specified by:
 \begin{align*}
@@ -66,8 +66,8 @@ Then the efficiency $e(X)$ of all running converters in module X is in
 a single simple and nifty equation:
 
 \begin{align*}
-  e(X) & := \max\left(ce_K\left(\frac{\min\left(\max\left(\frac{1}{K}\left(2H_M+10H_O+\frac{C}{10}\right), 0.5\right), 1.5\right)\cdot \frac{K - k}{2}+(2k-s)\cdot \frac{2W+M+\frac{1}{4}C}{K}}{R}\right)\right.\\
-    & \left.+ b\left(\frac{ep(X)-t(X)}{t(X)}\right), 0.25\right)
+  e(X) & := \max\left(ce_K\left(\frac{\min\left(\max\left(\frac{1}{K}\left(2H_M+10H_O+\frac{C}{10}\right), 0.5\right), 1.5\right)\cdot \left(\frac{K - k}{2}+(2k-s)\right)\cdot \frac{2W+M+\frac{C}{4}}{K}}{R}\right)\right.\\
+    & \left.+ b\left(\frac{ep(X)}{t(X)}-1\right), 0.25\right)
 \end{align*}
 
 or with a little bit more explanation
