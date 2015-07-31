@@ -28,16 +28,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.175"
-     inkscape:cx="471.05151"
-     inkscape:cy="679.54495"
+     inkscape:zoom="0.12374369"
+     inkscape:cx="45.327395"
+     inkscape:cy="272.6329"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1436"
      inkscape:window-height="908"
-     inkscape:window-x="289"
-     inkscape:window-y="46"
+     inkscape:window-x="157"
+     inkscape:window-y="40"
      inkscape:window-maximized="0"
      showguides="true"
      inkscape:guide-bbox="true"
@@ -75,7 +75,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -83,10 +83,26 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       style="fill:#ffff01;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 0 -947.63867 A 2000 2000 0 0 0 -800 -778.02344 L -800 2732.3633 L 1081.4473 2732.3633 A 2000 2000 0 0 0 2000 1052.3613 A 2000 2000 0 0 0 0 -947.63867 z "
-       id="path4142" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4185"
+       width="1440"
+       height="5360"
+       x="-2240"
+       y="-1747.6378" />
+    <rect
+       style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4187"
+       width="4880"
+       height="880"
+       x="-2480"
+       y="2652.3623" />
+    <circle
+       style="fill:#ffff00;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4183"
+       cx="0"
+       cy="1052.3622"
+       r="2000" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -103,7 +119,7 @@
          x="-77.420654"
          y="1410.5433"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#ff00ff;fill-opacity:1"
-         id="tspan4210">Energy Distribution Range</tspan></text>
+         id="tspan4210">Power Range</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#fd00ff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 0,1052.3622 c 2000,0 2000,0 2000,0 l 0,0"
