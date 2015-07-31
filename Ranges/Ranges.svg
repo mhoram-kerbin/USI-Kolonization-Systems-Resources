@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Ranges.svg"
+   inkscape:export-filename="C:\Sauermann\ranges.png"
+   inkscape:export-xdpi="24.423325"
+   inkscape:export-ydpi="24.423325">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.175"
+     inkscape:cx="471.05151"
+     inkscape:cy="679.54495"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1436"
+     inkscape:window-height="908"
+     inkscape:window-x="289"
+     inkscape:window-y="46"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4136" />
+    <sodipodi:guide
+       position="-560,2480.0001"
+       orientation="1,0"
+       id="guide4158" />
+    <sodipodi:guide
+       position="-2960,-1360"
+       orientation="0,1"
+       id="guide4160" />
+    <sodipodi:guide
+       position="400,1360"
+       orientation="0,1"
+       id="guide4252" />
+    <sodipodi:guide
+       position="2020,40.000001"
+       orientation="1,0"
+       id="guide4254" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffff01;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 0 -947.63867 A 2000 2000 0 0 0 -800 -778.02344 L -800 2732.3633 L 1081.4473 2732.3633 A 2000 2000 0 0 0 2000 1052.3613 A 2000 2000 0 0 0 0 -947.63867 z "
+       id="path4142" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-77.420654"
+       y="1254.2933"
+       id="text4146"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4148"
+         x="-77.420654"
+         y="1254.2933"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#ff00ff;fill-opacity:1">ModulePowerDistributor</tspan><tspan
+         sodipodi:role="line"
+         x="-77.420654"
+         y="1410.5433"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#ff00ff;fill-opacity:1"
+         id="tspan4210">Energy Distribution Range</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#fd00ff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 0,1052.3622 c 2000,0 2000,0 2000,0 l 0,0"
+       id="path4150"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ff00ff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4144"
+       width="160"
+       height="160"
+       x="-80"
+       y="972.36218" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="920"
+       y="1012.3622"
+       id="text4152"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4154"
+         x="920"
+         y="1012.3622"
+         style="-inkscape-font-specification:Calibri;font-family:Calibri;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#ff00ff;fill-opacity:1;">2km</tspan></text>
+    <circle
+       style="fill:#008001;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4162"
+       cx="0"
+       cy="52.362225"
+       r="750" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ff8000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-250.49805"
+       y="253.14711"
+       id="text4168"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-250.49805"
+         y="253.14711"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri"
+         id="tspan4186">Logistics Range</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#ff8000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 0,52.362226 c 720,0 750,0 750,0"
+       id="path4178"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#ff8001;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4166"
+       width="160"
+       height="160"
+       x="-80"
+       y="-27.637774" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Calibri;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;-inkscape-font-specification:Calibri;font-stretch:normal;font-variant:normal;"
+       x="280"
+       y="12.362205"
+       id="text4180"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4182"
+         x="280"
+         y="12.362205"
+         style="fill:#ff8000;fill-opacity:1">750m</tspan></text>
+    <circle
+       style="fill:#89c4ff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4190"
+       cx="-1.1368684e-013"
+       cy="2052.3623"
+       r="500" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-330.49805"
+       y="1767.3622"
+       id="text4194"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4196"
+         x="-330.49805"
+         y="1767.3622"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#804100;fill-opacity:1">Production</tspan><tspan
+         sodipodi:role="line"
+         x="-330.49805"
+         y="1923.6122"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#804100;fill-opacity:1"
+         id="tspan4198">Efficiency Part</tspan><tspan
+         sodipodi:role="line"
+         x="-330.49805"
+         y="2079.8623"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#804100;fill-opacity:1"
+         id="tspan4204" /><tspan
+         sodipodi:role="line"
+         x="-330.49805"
+         y="2236.1123"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#804100;fill-opacity:1"
+         id="tspan4200">Range</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#804000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 0,2052.3622 500,0"
+       id="path4202"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#804000;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4192"
+       width="160"
+       height="160"
+       x="-80"
+       y="1972.3622" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="153.83545"
+       y="2171.8521"
+       id="text4206"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4208"
+         x="153.83545"
+         y="2171.8521"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#804000;fill-opacity:1">500m</tspan></text>
+    <circle
+       style="fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4212"
+       cx="840"
+       cy="1989.8622"
+       r="140" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="490.802"
+       y="1613.9525"
+       id="text4214"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="490.802"
+         y="1613.9525"
+         id="tspan4220"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">ModuleResourceDistributor</tspan><tspan
+         sodipodi:role="line"
+         x="490.802"
+         y="1770.2025"
+         id="tspan4218"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">Depot Range</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1054.0649"
+       y="2051.8521"
+       id="text4222"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4224"
+         x="1054.0649"
+         y="2051.8521"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri;fill:#0000ff;fill-opacity:1">150m</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#fcfdfe;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 840,1989.8622 c 140,0 140,0 140,0"
+       id="path4226"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#fdffff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4228"
+       width="40"
+       height="40"
+       x="820"
+       y="1969.8622" />
+    <circle
+       style="fill:#fdffff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4230"
+       cx="1045.5432"
+       cy="303.08734"
+       r="100" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1045.5432,303.08734 c 100,0 100,0 100,0"
+       id="path4234"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#fdffff;fill-opacity:1;stroke:#000000;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4232"
+       width="40"
+       height="40"
+       x="1025.5432"
+       y="283.08734" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="794.07959"
+       y="553.83435"
+       id="text4236"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4238"
+         x="794.07959"
+         y="553.83435"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri">Kerbal Happieness</tspan><tspan
+         sodipodi:role="line"
+         x="794.07959"
+         y="710.08435"
+         id="tspan4242"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri">Colony Range</tspan><tspan
+         sodipodi:role="line"
+         x="794.07959"
+         y="866.33435"
+         id="tspan4240"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1225.5432"
+       y="308.08734"
+       id="text4244"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4246"
+         x="1225.5432"
+         y="308.08734"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Calibri;-inkscape-font-specification:Calibri">100m</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:125px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="1160"
+       y="-827.63782"
+       id="text4272"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4274"
+         x="1160"
+         y="-827.63782">USI Ranges</tspan><tspan
+         sodipodi:role="line"
+         x="1160"
+         y="-671.38782"
+         id="tspan4276">V0.31.6</tspan></text>
+  </g>
+</svg>
